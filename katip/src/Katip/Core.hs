@@ -23,7 +23,6 @@ module Katip.Core where
 
 -------------------------------------------------------------------------------
 import           Control.Applicative               as A
-import           Control.AutoUpdate
 import           Control.Concurrent
 import qualified Control.Concurrent.Async          as Async
 import           Control.Concurrent.STM
@@ -680,7 +679,7 @@ initLogEnv an env = LogEnv
   <*> getProcessID
   <*> pure an
   <*> pure env
-  <*> mkAutoUpdate defaultUpdateSettings { updateAction = getCurrentTime, updateFreq = 1000 }
+  <*> pure getCurrentTime
   <*> pure mempty
 
 

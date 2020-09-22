@@ -1,13 +1,10 @@
-resolver: lts-12.26
+resolver: nightly-2020-01-30
 packages:
   - katip
   - katip-elasticsearch
   - katip-datadog
   - katip-logzio
-extra-deps:
-  - bloodhound-0.16.0.0
-  - unliftio-core-0.2.0.1
-  - resourcet-1.2.3
+extra-deps: []
 flags:
   katip:
     lib-Werror: true
